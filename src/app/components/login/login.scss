@@ -1,0 +1,30 @@
+.login-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    gap: 15rem;
+}
+
+.login-box {
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-div {
+    background: repeating-linear-gradient(
+        90deg,
+        var(--grey),
+        var(--grey) 40px,
+        var(--teal) 40px,
+        var(--teal) 80px
+    );
+    height: 100vh;
+    width: 50vw;
+}
+
+img .logo {
+    
+}
