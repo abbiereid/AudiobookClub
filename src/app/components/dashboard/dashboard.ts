@@ -6,6 +6,6 @@ import { Component } from "@angular/core";
     styleUrl: "./dashboard.scss",
     standalone: true,
     imports: []
-}) export class Dashboard {
+}) export class DashboardComponent {
     
 }
