@@ -3,6 +3,8 @@ import { MatCardModule } from "@angular/material/card";
 import {MatButtonModule} from '@angular/material/button';
 import { Router } from "@angular/router";
 import { AccountService } from "../../services/account-api-service";
+import { IconService } from "../../services/icon.service";
+import { MatIcon } from "@angular/material/icon";
 
 @Component({
     selector: "login",
@@ -10,13 +12,15 @@ import { AccountService } from "../../services/account-api-service";
     styleUrl: "./login.scss",
     standalone: true,
     imports: [
-        MatCardModule,
-        MatButtonModule
-    ]
+    MatCardModule,
+    MatButtonModule,
+    MatIcon
+]
 }) export class LoginComponent {
     constructor(
         private router: Router,
         private accountService: AccountService,
+        public iconService: IconService,
     ) {}
     login() {
         // Simulating login due to Spotifys current development pause.

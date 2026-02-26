@@ -26,3 +26,27 @@ body {
     margin: 0;
     height: 100%;
 }
+
+// Overwriting Angular Material Styles for generic components
+//This will probably take a while to perfect
+
+// -----------------------------------------------------
+
+//Card
+
+mat-card-title {
+    padding: 1rem !important; 
+    border-bottom: 1px solid rgba(155, 143, 203, 0.2) !important;
+}
+
+mat-card-content {
+    padding: 1rem !important;
+}
+
+mat-card-footer {
+  padding: 1rem !important;
+  border-top: 1px solid rgba(155, 143, 203, 0.2) !important;
+}
+
+//-------------------------------------------------------
+
