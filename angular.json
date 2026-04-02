@@ -65,6 +65,10 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "ssl": true,
+            "host": "127.0.0.1"
+          },
           "configurations": {
             "production": {
               "buildTarget": "audiobookclub:build:production"

@@ -5,6 +5,7 @@ import { Router } from "@angular/router";
 import { AccountService } from "../../services/account-api-service";
 import { IconService } from "../../services/icon.service";
 import { MatIcon } from "@angular/material/icon";
+import { environment } from "../../../environments/environment";
 
 @Component({
     selector: "login",
@@ -17,14 +18,19 @@ import { MatIcon } from "@angular/material/icon";
     MatIcon
 ]
 }) export class LoginComponent {
+
+    private baseAuthUrl = 'https://accounts.spotify.com/authorize?';
+
     constructor(
         private router: Router,
         private accountService: AccountService,
         public iconService: IconService,
     ) {}
     login() {
-        // Simulating login due to Spotifys current development pause.
-        this.accountService.isLoggedIn.set(true);
-        this.router.navigate(['']);
+        window.location.href = this.baseAuthUrl + new URLSearchParams({
+            client_id: environment.clientId,
+            redirect_uri: environment.spotifyRedirectUrl,
+            response_type: 'code'
+        }).toString();
     }
 }
