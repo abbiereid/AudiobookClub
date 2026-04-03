@@ -1,8 +1,6 @@
 import { Component } from "@angular/core";
 import { MatCardModule } from "@angular/material/card";
 import {MatButtonModule} from '@angular/material/button';
-import { Router } from "@angular/router";
-import { AccountService } from "../../services/account-api-service";
 import { IconService } from "../../services/icon.service";
 import { MatIcon } from "@angular/material/icon";
 import { environment } from "../../../environments/environment";
@@ -22,8 +20,6 @@ import { environment } from "../../../environments/environment";
     private baseAuthUrl = 'https://accounts.spotify.com/authorize?';
 
     constructor(
-        private router: Router,
-        private accountService: AccountService,
         public iconService: IconService,
     ) {}
     login() {
