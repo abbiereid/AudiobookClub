@@ -7,7 +7,7 @@ import { DomSanitizer } from "@angular/platform-browser";
 })
 export class IconService {
     private icons : any[] = [
-        { name: 'spotify', url: 'assets/icons/spotify.svg' }
+        { name: 'spotify', url: '/assets/icons/spotify.svg' }
     ];
 
     constructor(
