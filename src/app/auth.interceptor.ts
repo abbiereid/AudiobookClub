@@ -8,7 +8,11 @@ export const authInterceptor: HttpInterceptorFn = (req, next) => {
     const accountService = inject(AccountService);
     const router = inject(Router);
 
-    return next(req).pipe(
+    const addedCredentialsReq = req.clone({
+        withCredentials: true
+    });
+
+    return next(addedCredentialsReq).pipe(
         catchError((error) => {
             if (error.status === 401) {
                 accountService.clearUser();
