@@ -1,5 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, signal } from "@angular/core";
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @Component({
     selector: "menu",
@@ -8,7 +9,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     standalone: true,
     imports: [
         MatSidenavModule,
+        MatToolbarModule,
     ]
 }) export class MenuComponent {
-
+    sideNavMode = signal("side");
 }
