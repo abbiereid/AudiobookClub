@@ -1,6 +1,6 @@
 export interface SpotifyUser {
     id: string;
-    displayName: string | null;
+    display_name: string | null;
     email: string | null;
     images: SpotifyUserProfileImage[] | null;
 }
