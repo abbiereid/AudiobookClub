@@ -1,4 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, OnInit, signal, WritableSignal } from "@angular/core";
+import { AccountService } from "../../services/account-api-service";
+import { SpotifyUser } from "../../models/SpotifyUser";
 
 @Component({
     selector: "dashboard",
@@ -6,6 +8,11 @@ import { Component } from "@angular/core";
     styleUrl: "./dashboard.scss",
     standalone: true,
     imports: []
-}) export class DashboardComponent {
-    
+}) export class DashboardComponent implements OnInit {
+    constructor(
+        public accountService: AccountService,
+    ){}
+
+    ngOnInit() {
+    }
 }

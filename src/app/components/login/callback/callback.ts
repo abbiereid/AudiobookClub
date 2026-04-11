@@ -3,13 +3,16 @@ import { AccountService } from "../../../services/account-api-service";
 import { SpotifyApiService } from "../../../services/spotify-api-service";
 import { ActivatedRoute, Router } from "@angular/router";
 import { switchMap } from "rxjs";
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 
 @Component({
     selector: "login-callback",
     templateUrl: "./callback.html",
     styleUrl: "./callback.scss",
     standalone: true,
-    imports: []
+    imports: [
+        MatProgressSpinnerModule,
+    ],
 }) export class LoginCallbackComponent implements OnInit {
     constructor(
         private accountService: AccountService,

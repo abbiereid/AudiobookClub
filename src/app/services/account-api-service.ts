@@ -14,7 +14,7 @@ export class AccountService {
         return !!this.user();
     });
     private user = signal<SpotifyUser | null>(null);
-    readonly currentUser = this.user.asReadonly();
+    public readonly currentUser = this.user.asReadonly();
 
     public getUser(): Observable<SpotifyUser | null> {
         return this.spotifyApiService.getCurrentUser().pipe(tap((user: SpotifyUser | null) => {
