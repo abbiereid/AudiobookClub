@@ -16,12 +16,13 @@ html {
 
 :root {
     --purple: #CDC7E5;
-    --dark-purple: #9B8FCB;
+    --dark-purple: #6b6195;
+    --white: #FFFFFF;
 }
 
 body {
     background-color: var(--purple);
-    color: var(--black);
+    color: var(--dark-purple);
     font-family: 'Playfair Display', serif;
     margin: 0;
     height: 100%;
