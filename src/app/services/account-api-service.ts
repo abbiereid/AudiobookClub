@@ -13,10 +13,13 @@ export class AccountService {
     readonly isLoggedIn = computed(() => {
         return !!this.user();
     });
-    private user = signal<SpotifyUser | null>(null);
+    private user = signal<SpotifyUser | null | undefined>(undefined);
     public readonly currentUser = this.user.asReadonly();
 
-    public getUser(): Observable<SpotifyUser | null> {
+    public getUser(): Observable<SpotifyUser | null | undefined> {
+        if(this.user() !== undefined) {
+            return of(this.user());
+        }
         return this.spotifyApiService.getCurrentUser().pipe(tap((user: SpotifyUser | null) => {
             this.user.set(user);
         }),

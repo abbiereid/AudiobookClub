@@ -1,4 +1,5 @@
 @if (accountService.isLoggedIn()) {
     <menu></menu>
+} @else {
+    <router-outlet />
 }
-<router-outlet />

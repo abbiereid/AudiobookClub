@@ -27,6 +27,7 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
             //Need to handle this and other errorsbetter, also should start using mat snackbars for errors and notifications
             //Just for now
             console.error("No code provided in callback");
+            this.router.navigateByUrl('/login'); //Redirect back to login if this fails
             return;
         }
 
@@ -36,6 +37,7 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
             },
             error: (error) => {
                 console.error("Error fetching user", error);
+                this.router.navigateByUrl('/login'); //Redirect back to login if this fails
             }
         });
     }

@@ -1,5 +1,8 @@
-<mat-sidenav-container>
-    <mat-sidenav #sidenav mode="side" opened>
-        <p>Test</p>
+<mat-sidenav-container class="menu-container">
+    <mat-sidenav class="menu" #sidenav mode="side" opened>
+        <h2>Welcome, {{ accountService.currentUser()?.display_name }}!</h2>
     </mat-sidenav>
+    <mat-sidenav-content class="content">
+        <router-outlet />
+    </mat-sidenav-content>
 </mat-sidenav-container>
